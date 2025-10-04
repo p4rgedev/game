@@ -115,7 +115,50 @@
   "events": [
     {
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
+      "conditions": [
+        {
+          "type": {
+            "value": "Gamepads::C_Axis_pushed"
+          },
+          "parameters": [
+            "",
+            "1",
+            "\"Left\"",
+            "\"Any\"",
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "AddForceXY"
+          },
+          "parameters": [
+            "player",
+            "Gamepads::StickForceX(1,\"Left\")",
+            "Gamepads::StickForceY(1,\"Left\")",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "Gamepads::C_Axis_pushed"
+          },
+          "parameters": [
+            "",
+            "1",
+            "\"Right\"",
+            "\"Any\"",
+            ""
+          ]
+        }
+      ],
       "actions": []
     }
   ],
